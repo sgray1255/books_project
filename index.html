@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gray Books</title>
+  <title>Great Library</title>
 </head>
 <!-- Google Books UI
 MVP:
@@ -33,9 +33,14 @@ Bonus (optional, but highly recommended):
 Give feedback to the user when no book results can be found for the query.
 When a user clicks a book in the grid, a modal should appear with more book information, think about release, publish date, country, languages, etc. -->
   <body>
-    <ul id="books"></ul>
     <input id="search" type="text">
     <button id="getBooks">Search Book</button>
+    <div id="books">
+      <div id="books__grid">
+        <ul id="books__grid__list"></ul>
+      </div>
+    </div>
+   
     <script src="index.js"></script>
   </body>
 </html>

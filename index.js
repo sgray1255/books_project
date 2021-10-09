@@ -1,53 +1,67 @@
 const GOOGLE_BOOKS = "https://www.googleapis.com/books/v1/volumes?q="
 ;
-const input = document.querySelector("#search");
-let SEARCH = "slaughterhouse five";
 
 
-const getBooks = async () => {
-  const response = await fetch(`${GOOGLE_BOOKS}${SEARCH}&orderBy=relevance`);
-
+const getBooks = async (query) => {
+  const response = await fetch(`${GOOGLE_BOOKS}${query}&orderBy=relevance&maxResults=8`);
   const data = await response.json();
-  console.log(data);
   return data.items;
 }
 
-getBooks();
 
 
-const getInfo = async (query) => {
-  const info = await getBooks();
-  console.log(info);
-  const bookArray = info.map((query) => {
-    const bookObject = {
-      title: query.volumeInfo.title,
-      author: query.volumeInfo.authors,
-      description: query.volumeInfo.description
-    }
-    console.log(bookObject);
-    return bookObject;
-  })
-};
+// const getInfo = async (query) => {
+//   const info = await getBooks(query);
+//   // console.log(info);
+//   const bookArray = info.map((query) => {
+//     const bookObject = {
+//       title: query.volumeInfo.title,
+//       author: query.volumeInfo.authors,
+//       img: query.volumeInfo.imageLinks,
+//       description: query.volumeInfo.description
+//     }
+//     // console.log(bookObject);
+//     return bookObject;
+//   })
+//   return bookArray;
+// };
 
-getInfo();
+// getInfo();
 
 const button = document.querySelector("#getBooks");
 
+let list = {};
+
 button.addEventListener("click", async(event) => {
-  const books = await getBooks();
-  console.log(books);})
+ 
+  const input = document.querySelector("#search");
+  const query = input.value; 
 
-  const bookItems = () => {
-    const element = document.createElement('li');
-    const bookText = `${book}`;
-    const textNode = document.createTextNode(bookText);
+  if(!query) {
+    alert("Type in a keyword and click search!");
+    return;
+  }
 
-    element.appendChild(textNode);
-    return element;
-  };
+  const gotBooks = await getBooks(query);
 
-  const list = document.querySelector("#books");
 
-  const append = parent => child => parent.appendChild(child);
+  list = gotBooks.map((book) => {
 
-  listItems.forEach(append(list));
+  const element = document.createElement('li');
+
+  const cover = document.createElement('img');
+  cover.src = `${book.volumeInfo.imageLinks.smallThumbnail}`;
+
+  const bookText = `${book.volumeInfo.title} written by ${book.volumeInfo.authors}`;
+  const textNode = document.createTextNode(bookText);
+
+  element.appendChild(cover);
+  element.appendChild(textNode);
+  console.log(element)
+  return element; 
+  });
+
+});
+
+ 
+
