@@ -1,0 +1,43 @@
+.books {
+  padding-top: 45px;
+  height: 800px;
+
+  &__grid {
+
+  }
+
+  &__grid__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 5px;
+    
+  }
+}
+
+.gridItem {
+  // display: ;
+  flex-direction: column;
+  width: 150px;
+  list-style-type: none;
+  background-color: rgba($color: #FFFF, $alpha: 0.5);
+  // border: white 2px solid;
+  border-radius: 5px;
+}
+.gridItem > h4 {
+  font-family: 'Stylish', sans-serif;;
+}
+
+.cover {
+  height: 200px;
+  width: 150px;
+  border-radius: 5px;
+  
+}
+
+.description {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+

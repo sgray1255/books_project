@@ -1,0 +1,14 @@
+@use "./partials/page-size.scss";
+
+.background {
+  background-image: url("./images/background_library.jpeg");
+  @extend page;
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+}
+
+.opaque {
+  @extend page;
+  background-color: rgba(0, 0, 0, 0.3);
+}
