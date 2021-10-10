@@ -1,7 +1,6 @@
 const GOOGLE_BOOKS = "https://www.googleapis.com/books/v1/volumes?q="
 ;
-const input = document.querySelector("#search");
-const query = input.value; 
+
 
 
 const getBooks = async (query) => {
@@ -19,8 +18,8 @@ let list = {};
 button.addEventListener("click", async(event) => {
   // create function to reset result
 
-  // const input = document.querySelector("#search");
-  // const query = input.value; 
+  const input = document.querySelector("#search");
+  const query = input.value; 
 
   if(!query) {
     alert("Type in a keyword and click search!");
