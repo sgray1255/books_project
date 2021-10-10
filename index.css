@@ -1,0 +1,111 @@
+page, .background, .opaque {
+  width: 100% auto;
+  height: 800px;
+}
+
+.background {
+  background-image: url("./images/background_library.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.opaque {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+btn, #getBooks {
+  background-color: #191919;
+  color: white;
+  border: 1px solid #191919;
+  border-radius: 5px;
+}
+
+.srch {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 25px;
+}
+.srch__input {
+  border-radius: 5px;
+}
+
+#getBooks {
+  font-family: "Caesar Dressing", sans-serif;
+}
+
+.books {
+  padding-top: 45px;
+  height: 800px;
+}
+.books__grid__list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-gap: 5px;
+}
+
+.gridItem {
+  flex-direction: column;
+  width: 150px;
+  list-style-type: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+}
+
+.gridItem > h4 {
+  font-family: "Stylish", sans-serif;
+}
+
+.cover {
+  height: 200px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.description {
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.top {
+  height: 230px;
+  background-color: #191919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5%;
+}
+.title__main {
+  color: white;
+  font-family: "Caesar Dressing", sans-serif;
+  font-weight: bold;
+  letter-spacing: 0.15em;
+  font-size: 5vw;
+  display: flex;
+  justify-content: center;
+}
+.title__sub {
+  color: white;
+  font-family: "Stylish", sans-serif;
+  margin-top: 0%;
+}
+
+.column__left {
+  grid-area: left;
+  height: 10rem;
+  margin-left: 2%;
+}
+.column__right {
+  grid-area: right;
+  height: 10rem;
+  margin-right: 2%;
+}

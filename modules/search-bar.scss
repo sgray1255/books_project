@@ -1,0 +1,17 @@
+@use "./partials/btn-style";
+
+.srch {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding-top: 25px;
+
+  &__input {
+    border-radius: 5px;
+  }
+}
+
+#getBooks {
+  @extend btn;
+  font-family: 'Caesar Dressing', sans-serif;
+}
