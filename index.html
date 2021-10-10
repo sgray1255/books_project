@@ -4,38 +4,39 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gray Books</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Stylish&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caesar+Dressing&display=swap" rel="stylesheet">
+  <title>Great Library</title>
 </head>
-<!-- Google Books UI
-MVP:
-Create a page that allows users to search for books
-Page should include the following:
-Header section introducing the page
-Form containing a text input and a submit / search button
-A grid of books
-Instructions:
-When the submit button is clicked you need the request books from the Google books API using the input value as your query string
-The books that you receive should be rendered in the books grid.
-Each book in the grid should have an image, author, title and description
-The grid should be responsive on different screen sizes
-You should use async / await for your request code, NOT .then
-Styling (required):
-This application should look good, take some time to pick a palette and plan out your design. You can use tools like Figma or wireframe pro to plan what your application is going to look like.
-Styling must use BEM, and each block should have its own SCSS file
-Your palette should use variables
-Application Design (required):
-You should separate DOM functions and non-DOM functions in different modules Example: https://github.com/chillcaw/el-salvador-code-alongs/tree/master/js-modules
-Write as many non-DOM functions as you can
-Functions should do 1 thing, and should be as pure and reusable as possible
-Always use iterators over loops
-Always parametrize and abstract large pieces of duplicate code.
-Bonus (optional, but highly recommended):
-Give feedback to the user when no book results can be found for the query.
-When a user clicks a book in the grid, a modal should appear with more book information, think about release, publish date, country, languages, etc. -->
   <body>
-    <ul id="books"></ul>
-    <input id="search" type="text">
-    <button id="getBooks">Search Book</button>
+    <div class="top">
+      <img class="column__left" src="./images/columns.png" alt="column">
+      <div class="title">
+        <h1 class="title__main">Welcome to The Great Library 2.0</h1>
+        <h3 class="title__sub">This time we used an API ... in case of a fire.</h3> 
+      </div>
+      <img class="column__right" src="./images/columns.png" alt="column">
+    </div>
+  
+    <div class="background">
+      <div class="opaque">
+        <div class="srch">
+          <input class="srch__input" id="search" type="text" placeholder="Find a book...">
+          <button type ="reset" id="getBooks">SEARCH</button>
+        </div>
+        <div class="books">
+          <div class="books__grid">
+            <ul class="books__grid__list"></ul>
+          </div>
+        </div>
+      </div>
+    </div>
+   
     <script src="index.js"></script>
+    
   </body>
 </html>
