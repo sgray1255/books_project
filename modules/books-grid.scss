@@ -1,5 +1,7 @@
+@use "./partials/fonts";
+
 .books {
-  padding-top: 45px;
+  padding-top: 35px;
   height: 800px;
 
   &__grid {
@@ -10,23 +12,22 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-gap: 5px;
+    grid-gap: 20px;
     
   }
 }
 
 .gridItem {
-  // display: ;
+  display: flex;
   flex-direction: column;
   width: 150px;
   list-style-type: none;
   background-color: rgba($color: #FFFF, $alpha: 0.5);
   // border: white 2px solid;
   border-radius: 5px;
+  height: 350px;
 }
-.gridItem > h4 {
-  font-family: 'Stylish', sans-serif;;
-}
+
 
 .cover {
   height: 200px;
@@ -35,9 +36,28 @@
   
 }
 
-.description {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+.title {
+  @extend secondary;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0%;
+  border: none;
+}
+
+.author {
+  @extend secondary;
+  display: flex;
+  justify-content: center;
+  margin-top: 0%;
+}
+
+.description {   
+  width: 145px;
+  height: 30px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align:justify;
+  @extend secondary;
+  margin-top: 0%;
 }
 

@@ -1,6 +1,6 @@
 page, .background, .opaque {
   width: 100% auto;
-  height: 800px;
+  height: fill;
 }
 
 .background {
@@ -18,6 +18,16 @@ btn, #getBooks {
   color: white;
   border: 1px solid #191919;
   border-radius: 5px;
+  margin-left: 5px;
+}
+
+btn:hover, #getBooks:hover {
+  cursor: pointer;
+}
+
+btn:active, #getBooks:active {
+  background-color: white;
+  color: #191919;
 }
 
 .srch {
@@ -34,27 +44,33 @@ btn, #getBooks {
   font-family: "Caesar Dressing", sans-serif;
 }
 
+main, .header__main {
+  font-family: "Caesar Dressing", sans-serif;
+}
+
+secondary, .header__sub, .title, .author, .description {
+  font-family: "Stylish", sans-serif;
+}
+
 .books {
-  padding-top: 45px;
+  padding-top: 35px;
   height: 800px;
 }
 .books__grid__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 5px;
+  grid-gap: 20px;
 }
 
 .gridItem {
+  display: flex;
   flex-direction: column;
   width: 150px;
   list-style-type: none;
   background-color: rgba(255, 255, 255, 0.5);
   border-radius: 5px;
-}
-
-.gridItem > h4 {
-  font-family: "Stylish", sans-serif;
+  height: 350px;
 }
 
 .cover {
@@ -63,10 +79,26 @@ btn, #getBooks {
   border-radius: 5px;
 }
 
+.title {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0%;
+  border: none;
+}
+
+.author {
+  display: flex;
+  justify-content: center;
+  margin-top: 0%;
+}
+
 .description {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  width: 145px;
+  height: 30px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  margin-top: 0%;
 }
 
 .top {
@@ -77,26 +109,26 @@ btn, #getBooks {
   align-items: center;
 }
 
-.title {
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-left: 5%;
 }
-.title__main {
+.header__main {
   color: white;
-  font-family: "Caesar Dressing", sans-serif;
   font-weight: bold;
   letter-spacing: 0.15em;
   font-size: 5vw;
   display: flex;
   justify-content: center;
+  margin-bottom: 0%;
 }
-.title__sub {
+.header__sub {
   color: white;
-  font-family: "Stylish", sans-serif;
-  margin-top: 0%;
+  padding-top: 0%;
+  margin-right: 5%;
 }
 
 .column__left {
