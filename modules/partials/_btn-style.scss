@@ -3,4 +3,14 @@ btn {
   color: white;
   border: 1px solid #191919;
   border-radius: 5px;
+  margin-left: 5px;
+}
+
+btn:hover {
+  cursor: pointer;
+}
+
+btn:active {
+  background-color: white;
+  color: #191919;
 }

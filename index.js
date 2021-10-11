@@ -31,7 +31,21 @@ button.addEventListener("click", async(event) => {
 
   list = gotBooks.map((book) => {
 
-  const element = document.createElement('h4');
+  const element = document.createElement('li');
+  element.classList.add("gridItem");
+
+  const title = document.createElement('h3');
+  title.classList.add("title")
+  const titleText = `${book.volumeInfo.title}`;
+  const titleNode = document.createTextNode(titleText);
+  title.appendChild(titleNode);
+
+  const author = document.createElement('h5');
+  author.classList.add("author");
+  const authorText = `${book.volumeInfo.authors}`;
+  const authorNode = document.createTextNode(authorText);
+  author.appendChild(authorNode);
+  
 
   const cover = document.createElement('img');
   cover.classList.add("cover");
@@ -41,28 +55,27 @@ button.addEventListener("click", async(event) => {
     cover.src = `${book.volumeInfo.imageLinks.smallThumbnail}`;
 
   };
+  
+  // const modal = document.createElement('button');
+  // modal.classList.add("modal-button");
+  // const buttonText = "description";
+  // const buttonNode = document.createTextNode(buttonText);
+  // modal.appendChild(buttonNode);
 
-  const titleText = `${book.volumeInfo.title}`;
-  const titleNode = document.createTextNode(titleText);
 
-
-  const description = document.createElement('p');
-  const descriptionText = " " + ` Description: ${book.volumeInfo.description}`;
+  const description = document.createElement('div');
+  description.classList.add("description");
+  const descriptionText = `${book.volumeInfo.description}`;
   const descriptionNode = document.createTextNode(descriptionText);
   description.appendChild(descriptionNode);
 
-  const author = document.createElement('h5');
-  const authorText = ` Written by: ${book.volumeInfo.authors}`;
-  const authorNode = document.createTextNode(authorText);
-  author.appendChild(authorNode);
-  
 
   element.appendChild(cover);
-  element.appendChild(titleNode);
+  element.appendChild(title);
   element.appendChild(author)
-  // element.appendChild(description);
-  console.log(element)
-  element.classList.add("gridItem");
+  // element.appendChild(modal);
+  element.appendChild(description);
+  // console.log(element)
   return element; 
   });
 
@@ -80,6 +93,33 @@ if (gridList.innerHTML !== "") {
 }
 });
 
+// const getDescription = querySelector(".title-button");
 
- 
+// let description = {};
 
+// getDescription.addEventListener("click", async (event) => {
+  
+//   const query = getDescription.innerHTML; 
+
+//   const gotBooks = await getBooks(query);
+
+//   description = gotBooks.map((book) => {
+    
+//     const desElement = document.createElement('div');
+//     desElement.classList.add("overlay")
+
+//     const description = document.createElement('div')
+//     const descriptionText = `${book.volumeInfo.description}`;
+//     const descriptionNode = document.createTextNode(descriptionText);
+//     description.appendChild(descriptionNode);
+
+//     desElement.appendChild(description);
+//     return desElement;
+//   })
+
+//   const description__overlay = document.getElementById(".description__overlay");
+
+
+//   const append = (parent) => (child) => parent.appendChild(child);
+
+//   list.forEach(append(description__overlay))});
