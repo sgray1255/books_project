@@ -1,0 +1,13 @@
+@use "./../modules/background.scss";
+@use "./../modules/search-bar.scss";
+@use "./../modules/books-grid.scss";
+@use "./../modules/title.scss";
+
+@media only screen and (max-width: 500px) {
+  .background {
+    width: auto;
+    height: auto;
+    background-repeat: repeat-y;
+   
+  };
+}

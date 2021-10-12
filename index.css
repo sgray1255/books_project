@@ -1,23 +1,35 @@
 page, .background, .opaque {
-  width: 100% auto;
-  height: 800px;
+  width: auto;
+  height: 1200px;
+  background-repeat: repeat-y;
 }
 
 .background {
-  background-image: url("./images/background_library.jpeg");
+  background-image: url("./images/greek-key-background.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .opaque {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(241, 237, 237, 0.5);
 }
 
 btn, #getBooks {
-  background-color: #191919;
+  background-color: #7992A9;
   color: white;
-  border: 1px solid #191919;
+  border: 1px solid white;
   border-radius: 5px;
+  margin-left: 5px;
+}
+
+btn:hover, #getBooks:hover {
+  cursor: pointer;
+}
+
+btn:active, #getBooks:active {
+  background-color: white;
+  color: #7992A9;
+  border: 1px solid #7992A9;
 }
 
 .srch {
@@ -34,69 +46,95 @@ btn, #getBooks {
   font-family: "Caesar Dressing", sans-serif;
 }
 
+main, .header__main {
+  font-family: "Caesar Dressing", sans-serif;
+}
+
+secondary, .header__sub, .title, .author, .description {
+  font-family: "Stylish", sans-serif;
+}
+
 .books {
-  padding-top: 45px;
-  height: 800px;
+  padding-top: 35px;
 }
 .books__grid__list {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  grid-gap: 5px;
+  grid-gap: 20px;
 }
 
 .gridItem {
+  display: flex;
   flex-direction: column;
-  width: 150px;
+  align-items: center;
+  width: 200px;
   list-style-type: none;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
-}
-
-.gridItem > h4 {
-  font-family: "Stylish", sans-serif;
+  height: 450px;
+  padding: 20px;
 }
 
 .cover {
   height: 200px;
   width: 150px;
   border-radius: 5px;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0%;
+  border: none;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0%;
 }
 
 .description {
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
+  width: 100%;
+  height: 150px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: justify;
+  margin-top: 0%;
 }
 
 .top {
-  height: 230px;
-  background-color: #191919;
+  height: 250px;
+  background-color: #7992A9;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.title {
+.header {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   margin-left: 5%;
 }
-.title__main {
+.header__main {
   color: white;
-  font-family: "Caesar Dressing", sans-serif;
   font-weight: bold;
   letter-spacing: 0.15em;
   font-size: 5vw;
   display: flex;
   justify-content: center;
+  margin-bottom: 0%;
 }
-.title__sub {
+.header__sub {
   color: white;
-  font-family: "Stylish", sans-serif;
-  margin-top: 0%;
+  padding-top: 0%;
+  margin-right: 5%;
 }
 
 .column__left {
@@ -108,4 +146,24 @@ btn, #getBooks {
   grid-area: right;
   height: 10rem;
   margin-right: 2%;
+}
+
+@media only screen and (min-width: 993) {
+  .top {
+    height: 350px;
+  }
+}
+@media only screen and (min-width: 766px) and (max-width: 992px) {
+  .background {
+    width: 992;
+    height: 1000px;
+    background-repeat: repeat-y;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .background {
+    width: auto;
+    height: auto;
+    background-repeat: repeat-y;
+  }
 }

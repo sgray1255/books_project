@@ -1,0 +1,28 @@
+{
+	"folders": [
+		{
+			"path": "../../js-calculator"
+		},
+		{
+			"path": "../../js-challenges"
+		},
+		{
+			"path": "../../myPortfolio"
+		},
+		{
+			"path": "../../js-testing"
+		},
+		{
+			"path": ".."
+		},
+		{
+			"path": "../../my-app"
+		},
+		{
+			"path": "../../morse-code"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "books_project"
+	}
+}
