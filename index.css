@@ -1,22 +1,23 @@
 page, .background, .opaque {
-  width: 100% auto;
-  height: fill;
+  width: auto;
+  height: 1200px;
+  background-repeat: repeat-y;
 }
 
 .background {
-  background-image: url("./images/background_library.jpeg");
+  background-image: url("./images/greek-key-background.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .opaque {
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(241, 237, 237, 0.5);
 }
 
 btn, #getBooks {
-  background-color: #191919;
+  background-color: #7992A9;
   color: white;
-  border: 1px solid #191919;
+  border: 1px solid white;
   border-radius: 5px;
   margin-left: 5px;
 }
@@ -27,7 +28,8 @@ btn:hover, #getBooks:hover {
 
 btn:active, #getBooks:active {
   background-color: white;
-  color: #191919;
+  color: #7992A9;
+  border: 1px solid #7992A9;
 }
 
 .srch {
@@ -54,7 +56,6 @@ secondary, .header__sub, .title, .author, .description {
 
 .books {
   padding-top: 35px;
-  height: 800px;
 }
 .books__grid__list {
   display: grid;
@@ -66,35 +67,40 @@ secondary, .header__sub, .title, .author, .description {
 .gridItem {
   display: flex;
   flex-direction: column;
-  width: 150px;
+  align-items: center;
+  width: 200px;
   list-style-type: none;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 5px;
-  height: 350px;
+  height: 450px;
+  padding: 20px;
 }
 
 .cover {
   height: 200px;
   width: 150px;
   border-radius: 5px;
+  align-items: center;
 }
 
 .title {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-bottom: 0%;
   border: none;
 }
 
 .author {
   display: flex;
+  align-items: center;
   justify-content: center;
   margin-top: 0%;
 }
 
 .description {
-  width: 145px;
-  height: 30px;
+  width: 100%;
+  height: 150px;
   overflow-x: hidden;
   overflow-y: auto;
   text-align: justify;
@@ -102,8 +108,8 @@ secondary, .header__sub, .title, .author, .description {
 }
 
 .top {
-  height: 230px;
-  background-color: #191919;
+  height: 250px;
+  background-color: #7992A9;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -140,4 +146,24 @@ secondary, .header__sub, .title, .author, .description {
   grid-area: right;
   height: 10rem;
   margin-right: 2%;
+}
+
+@media only screen and (min-width: 993) {
+  .top {
+    height: 350px;
+  }
+}
+@media only screen and (min-width: 766px) and (max-width: 992px) {
+  .background {
+    width: 992;
+    height: 1000px;
+    background-repeat: repeat-y;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .background {
+    width: auto;
+    height: auto;
+    background-repeat: repeat-y;
+  }
 }

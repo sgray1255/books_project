@@ -1,7 +1,7 @@
 btn {
-  background-color: #191919;
+  background-color: #7992A9;
   color: white;
-  border: 1px solid #191919;
+  border: 1px solid white;
   border-radius: 5px;
   margin-left: 5px;
 }
@@ -12,5 +12,7 @@ btn:hover {
 
 btn:active {
   background-color: white;
-  color: #191919;
+  color: #7992A9;
+
+  border: 1px solid #7992A9;
 }
