@@ -70,7 +70,7 @@ secondary, .header__sub, .title, .author, .description {
   align-items: center;
   width: 200px;
   list-style-type: none;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: #FFFF;
   border-radius: 5px;
   height: 450px;
   padding: 20px;
