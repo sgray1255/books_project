@@ -2,7 +2,7 @@
 
 .books {
   padding-top: 35px;
-  height: 800px;
+  
 
   &__grid {
 
@@ -20,12 +20,14 @@
 .gridItem {
   display: flex;
   flex-direction: column;
-  width: 150px;
+  align-items: center;
+  width: 200px;
   list-style-type: none;
-  background-color: rgba($color: #FFFF, $alpha: 0.5);
+  background-color: rgba($color: #FFFF, $alpha: 0.8);
   // border: white 2px solid;
   border-radius: 5px;
-  height: 350px;
+  height: 450px;
+  padding: 20px;
 }
 
 
@@ -33,13 +35,14 @@
   height: 200px;
   width: 150px;
   border-radius: 5px;
-  
+  align-items: center;
 }
 
 .title {
   @extend secondary;
   display: flex;
   justify-content: center;
+  align-items: center;
   margin-bottom: 0%;
   border: none;
 }
@@ -47,13 +50,14 @@
 .author {
   @extend secondary;
   display: flex;
+  align-items: center;
   justify-content: center;
   margin-top: 0%;
 }
 
 .description {   
-  width: 145px;
-  height: 30px;
+  width: 100%;
+  height: 150px;
   overflow-x: hidden;
   overflow-y: auto;
   text-align:justify;

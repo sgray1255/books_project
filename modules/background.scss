@@ -1,7 +1,7 @@
 @use "./partials/page-size.scss";
 
 .background {
-  background-image: url("./images/background_library.jpeg");
+  background-image: url("./images/greek-key-background.jpeg");
   @extend page;
   background-repeat: no-repeat;
   background-size: cover;
@@ -10,5 +10,5 @@
 
 .opaque {
   @extend page;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(241, 237, 237, 0.5);
 }
